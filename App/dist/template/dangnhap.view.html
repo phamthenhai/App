@@ -1,0 +1,34 @@
+<div class="modal-dialog">
+              <div class="modal-content">
+                  <form name="form" class="form center-block" ng-submit="form.$valid && vm.login()" novalidate>
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h2 class="text-center">ĐĂNG NHẬP</h2>
+                          <div ng-if="vm.error" class="text-danger">{{vm.error}}</div>
+                      </div>
+                      <div class="modal-body">
+                            <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.username.$invalid }">
+                              <input type="text" class="form-control input-md" ng-model="vm.username" placeholder="Email">
+                                <div ng-messages="form.$submitted && form.username.$error" class="help-block">
+                    <div ng-message="required">Username is required</div>
+                </div>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.password.$invalid }">
+                              <input type="password" class="form-control input-md" placeholder="Password" ng-model="vm.password">
+                                <div ng-messages="form.$submitted && form.password.$error" class="help-block">
+                    <div ng-message="required">Password is required</div>
+                </div>
+                            </div>
+
+                      </div>
+                      <div class="modal-footer">
+                          <div class="col-md-12">
+                              <span class="pull-left"><a href="#">Register</a></span> 
+                              <img ng-if="vm.loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                           <button ng-disabled="vm.loading"  class="btn btn-primary btn-md">Sign In</button>
+                          </div>	
+                      </div>
+                      </form>
+   </div>
+</div>
+
