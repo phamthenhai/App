@@ -166,3 +166,9 @@ h1 {
 
 .modal-content {
   margin-top: 0; }
+
+.cate {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 15px; }
